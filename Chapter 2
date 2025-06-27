@@ -1,0 +1,29 @@
+Chapter 2
+Rust Operators, Introduction to Operators, Arithmetic Operators, Logical Operators, Comparison
+Operators, Bitwise Operators, Assignment and Compound Assignment Operators, Type Casting
+Operator, Borrowing and Dereferencing Operators, Precedence and Associativity.
+Programming Exercises
+1. Write a program to implement Type Casting Operator.
+2. Write a program to implement Borrowing and Dereferencing Operators
+
+1.Code 
+fn main() {
+    println!("Hello, World!");
+    let a=15;
+    let b=(a as f64)/2.0;
+    println!("{}",b);
+}
+
+2.Code 
+fn main() {
+    let x = 5;      // Declare a variable x
+    let y = &x;     // Borrow x by creating a reference y
+
+    println!("x: {}", x);  // Prints: x: 5
+    println!("y: {}", y);  // Prints: y: 5 (y is a reference to x)
+
+    // Dereference y to access the value it points to
+    let deref_y = *y;  // Dereference y to get the value it refers to (which is 5)
+
+    println!("Dereferenced y: {}", deref_y);  // Prints: Dereferenced y: 5
+}
