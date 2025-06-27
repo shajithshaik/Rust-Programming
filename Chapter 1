@@ -1,0 +1,105 @@
+Chapter 1
+
+Code 1:
+fn main() {
+    let mut x = 1000;
+    let y = "Programming";
+    println!("X = {}, Y = {}", x,y);
+    x = 1100;
+    println!("X = {}, Y = {}", x,y);
+    
+    
+}
+
+
+Code 2:
+fn main() {
+    let x = 5; 
+    println!("Outer x = {}",x);
+    {
+        let x = 10;
+        println!("Inner x = {}", x);
+        {
+            let x = 20;
+            println!("Nested Inner x = {}", x);
+        }
+        println!("Inner x after nested scope = {}", x);
+    }
+    println!("Outer x after inner scope = {}", x);
+}
+Code 3:
+fn main() {
+    for i in 1..=5 {
+        println!("{}", i.to_string().repeat(i));
+    }
+}
+
+Code 4:
+fn main() {
+    let a = 10;
+    let b = 3.14;
+    let c = "Rust";
+    let x: i32 = 20;
+    let y: f64 = 2.71;
+    let z: &str = "Programming";
+    println!("Implicit: a = {}, b = {}, c = {}",a,b,c);
+    println!("Explicit: x = {}, y = {}, z = {}",x,y,z);
+    
+}
+Code 5:
+fn main() {
+    let arr = [0, 2, 4, 6, 8, 10]; 
+
+    println!("Array elements:");
+    for value in arr.iter() {
+        println!("{}", value);
+    }
+}
+Code 6:
+fn main() {
+    let person: (&str, i32, f64) = ("Alice", 30, 65.5);
+
+    println!("Name: {}", person.0);
+    println!("Age: {}", person.1);
+    println!("Weight: {}", person.2);
+
+    let (name, age, weight) = person;
+    println!("Destructured -> Name: {}, Age: {}, Weight: {}", name, age, weight);
+}
+Code 7:
+fn main() {
+    let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+    let slice_a = &arr[1..3];
+    println!("Slice a (2nd and 3rd elements): {:?}", slice_a);
+
+    let slice_b = &arr[..4];
+    println!("Slice b (start omitted, up to 4th index): {:?}", slice_b);
+
+    let slice_c = &arr[3..];
+    println!("Slice c (end omitted, from 4th index to end): {:?}", slice_c);
+
+    let slice_d = &arr[..];
+    println!("Slice d (whole array): {:?}", slice_d);
+}
+Code 8:
+fn main() {
+    const MAX_POINTS: u32 = 100_000;
+    const PI: f64 = 3.141592653589793;
+    const IS_ACTIVE: bool = true;
+    const GREETING: &str = "Hello, Rust!";
+
+    println!("MAX_POINTS: {}", MAX_POINTS);
+    println!("PI: {}", PI);
+    println!("IS_ACTIVE: {}", IS_ACTIVE);
+    println!("GREETING: {}", GREETING);
+}
+Code 9:
+fn main() {
+    let x = 100;
+    let y = &x;
+
+    println!("{}", x);
+    println!("{}", y);
+    println!("{}", *y);
+}
